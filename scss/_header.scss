@@ -1,0 +1,235 @@
+.hero-header{
+    &__menu{
+        width: $widthSize;
+        height: 70px;
+        background:url('../images/png/Merged\ bar-17.png') repeat;
+        .logo{
+            height: 60px;
+            margin: 8px 40px;
+        }
+        ul{
+            float: right;
+            margin-right: 50px;
+            li{
+                display: inline-block;
+                margin: 0 20px;
+                line-height: 80px;
+                #icon{
+                    color: $yellowColor;
+                }
+                a{
+                    color: $blackColor;
+                    font-weight: bold;
+                }
+                a:hover, a:active{
+                    color: $bColor;
+                }
+                .button{
+                    @include languge ;
+                    color: $bluColor;
+                }
+            }
+        }
+    }
+    &__info{
+        width: $widthSize;
+        height: 150px;
+        background: url('../images/png/En\ chiffres-3.png');
+        text-align: center;
+        h2{
+            padding: 15px;
+            font-size: 1.25rem;
+        }
+        p{
+            color: $bluColor;
+        }
+    }
+    &__illustration{
+        display: flex;
+        padding: 30px 25px;
+        width: 100%;
+        .doc{
+            width: 50%;
+            height: 50%;
+        }
+        .text{
+            text-align: center;
+            line-height: 45px;
+            margin-top: 35px;
+            h2{
+                color: $bluColor;
+                font-size: 1.87rem;
+                margin-bottom: 25px;
+            }
+            p{
+                color: $opacityColor;
+                font-weight: bold;
+                font-size: 1.56rem;
+                margin-left: 40px;
+            }
+            button{
+                margin-top: 30px;
+                margin-left: 100px;
+                font-size: 1.25rem;
+                width: 450px;
+                height: 45px;
+                @extend %test ; 
+            }
+            
+        }
+    }
+    .prévention{
+        margin-top: 30px;
+        text-align: center;
+        line-height: 2.18rem;
+        font-weight: bold;
+        h1{
+            font-size: 2rem;
+            line-height: 37px;
+            color: $bluColor;
+        }
+        &__virus{
+            padding: 0 35px;
+            margin-top: 30px;
+            @extend %displ;
+        }
+        &__corona{
+            p{
+                margin-bottom: 35px;
+                color: $bColor;
+            }
+           
+        }
+       
+        &__home{
+            margin: 30px;
+            p{
+                color: $bColor;
+            }
+        }
+        &__Informations{
+                @extend %displ;
+                justify-content: space-between;
+                height: 15.62rem;
+                width: $widthSize;
+                background-color: $blColor;
+                padding: 0px 90px;
+                h2{
+                    color: $bluColor;
+                    margin-bottom: 10px;
+                    font-size: 1.8rem;
+                }
+                p{
+                color: $bColor;
+                font-size: 1.2rem;
+                }
+                ul{
+                    display: flex;
+                    li{
+                        margin: 40px;
+                        button{
+                            width: 240px;
+                            height: 45px;
+                            @extend %test ; 
+                        }
+                    }
+                }
+        }
+        
+    }
+}
+@media ( max-width:767px ) {
+    .hero-header{
+        font-size: 8px;
+        &__menu{
+            height: 50px;
+            .logo{
+                height: 40px;
+                margin: 5px 30px;
+            }
+           ul{
+            margin-right: 20px;
+           li{
+            margin: 0 10px; 
+            font-size: 0.5rem;
+            line-height: 50px;
+           .button{
+            width: 120%;
+            height: 20px; 
+           }
+          } 
+         } 
+        }
+        &__info{
+            h2{
+                padding: 20px;
+                font-size: 0.6rem;
+            }
+        }
+        &__illustration{
+            display: block;
+            .doc{
+                text-align: center;
+                width: 100%;
+                height: 60%;
+            }
+            .text{
+                line-height: 25px; 
+                h2{
+                    font-size: 1rem; 
+                }
+                p{
+                    font-size: 1rem;   
+                }
+                img{
+                    width: 15%;
+                }
+                button{
+                    margin: 20px auto 0px;
+                    font-size: 1.25rem;
+                    width: 250px;
+                    height: 35px;
+                }
+            }
+        }
+        .prévention{
+            h1{
+                font-size: 1rem;   
+            }
+        }
+    }   
+}
+@media ( max-width:992px ) {
+    .hero-header{
+        // font-size: 14px;
+        &__illustration{
+            font-size: 10px;
+            .doc{
+                width: 50%;
+                height: 60%;
+                margin: 20px auto;
+            }
+            .text{
+                line-height: 25px;
+                margin: auto 30px auto 0px; 
+                h2{
+                    font-size: 1rem; 
+                }
+                p{
+                    font-size: 1rem;
+                    margin: auto;   
+                }
+                img{
+                    width: 15%;
+                    margin: auto;
+                }
+                button{
+                margin: 20px auto 0px;
+                font-size: 1.25rem;
+                width: 250px;
+                height: 35px;
+            }
+            }
+        }
+    }
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/png/logo__sante-63.png">
+    <title> Maladie coronavirus </title>
+    <link rel="stylesheet" href="css/stayle.css">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!------------------------------------------------------------------------------------------
+    ________________________________****start header***** ____________________________________
+    ------------------------------------------------------------------------------------------->
+    <header class="hero-header">
+        <nav class="hero-header__menu">
+            <img class="logo" src="images/png/logo__sante-1.png" alt="logo_santé">
+            <ul data-fr>
+                <li><a href="index.html">accueil</a></li>
+                <li><a href="index.html">conseil</a></li>
+                <li><button class="button  button1">عربي <i class="fa fa-globe"></i></button></li>
+            </ul>
+            <ul data-ar>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="index1.html">نصائح</a></li>
+                <li><button class="button  button1"> FRAN <i class="fa fa-globe"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!------------------------------------------------------------------------------------------
+    ________________________________****start section test***** ____________________________________
+    ------------------------------------------------------------------------------------------->
+    <section class="wrapper">
+        <div class="radio-btn-wrapper">
+            <div class="radio-btn">
+                <label>
+                    <input type="radio" name="radio1" checked="checked" />
+                    <div class="radio-btn__indicator"></div>
+                    <div class="label">Informations</div>
+                </label>
+            </div>
+            <div class="radio-btn">
+                <label>
+                    <input type="radio" name="radio2" id="questionnaire" />
+                    <div class="radio-btn__indicator"></div>
+                    <div class="label">Questionnaire</div>
+                </label>
+            </div>
+            <div class="radio-btn">
+                <label>
+                    <input type="radio" name="radio3" />
+                    <div class="radio-btn__indicator"></div>
+                    <div class="label">Résultats</div>
+                </label>
+            </div>
+        </div>
+    </section>
+    <section class="test">
+
+        <div class="test__préambule">
+            <h2>Préambule</h2>
+            <p>
+                « L’application est fournie à titre gratuit, en l’état, uniquement à des fins d’information pour
+                contribuer à fluidifier la prise en charge des personnes par les services d’urgences pendant
+                l’épidémie
+                de Coronavirus COVID-19. L’exhaustivité, l’exactitude, le caractère à jour des informations et
+                contenus
+                mis à disposition dans cette application, ou leur adéquation à des finalités particulières, ne sont
+                pas
+                garantis.
+            </p>
+            <div></div>
+            <p>
+                L’utilisation de l’application et de son contenu ne remplace en aucun cas le conseil nécessaire
+                donné
+                par votre médecin ou votre pharmacien ou tout autre professionnel de santé compétent dans chaque cas
+                particulier. Tout examen ou décision de l’utilisateur doit être réalisé ou prise de manière autonome
+                sur
+                la base de l’information scientifique et clinique pertinente, de la notice officielle du produit
+                concerné le cas échéant et en cas de doute, en consultant un médecin compétent.
+            </p>
+        </div>
+        <button onclick="quesClick()" id="oneClick" class="test__button">démarer le test</button>
+
+    </section>
+
+
+    <section class="questions">
+        <div class="questions__pro">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <div class="score"></div>
+        </div>
+        <!-- <div class="questions__q1">
+        </div>
+        <h2> Pensez-vous avoir ou avoir eu de la fièvre
+            ces derniers jours (frissons, sueurs) ?
+        </h2>
+        <div class="questions__inputs">
+            <div class="reponse">
+                <input type="radio" id="checke1" name="radio">
+                <label for="check1"> oui </label>
+            </div>
+            <div class="reponse">
+                <input type="radio" id="check2" name="radio"><
+                <label for="checke2"> non </label>
+            </div>
+        </div> -->
+        <div class="questions__createElement">
+            <h1 class="change">text</h1>
+            <div class="form">
+
+            </div>
+
+        </div>
+        <div class="resultat">
+            <h1 class="resultat__title">Lorem ipsum dolor sit amet consectetur</h1>
+            <div class="resultat__explication">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, velit quas! Mollitia ad deserunt
+                    magni
+                    animi cupiditate, veritatis neque eaque debitis dolor aspernatur itaque perspiciatis molestiae alias
+                    modi minima? Iure.</p>
+            </div>
+            <div class="resultat__reprendre">
+                <button onclick="quesClick()" id="oneClick" >Reprendre le test</button>
+            </div>
+        </div>
+
+        <div class="questions__one">
+            <h2>Anti-inflammatoires non stéroïdiens</h2>
+            <p>
+                La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur d'aggravation de
+                l’infection. En cas de fièvre, prenez du paracétamol. Cette remarque concerte les traitements par
+                gélules ou comprimés et ne concerne pas les formes inhalées. Si vous êtes déjà sous traitement,
+                n'arrêtez pas ce traitement, demandez l'avis de votre médecin ou de votre pharmacien.
+            </p>
+        </div>
+        <div class="questions__butttons">
+            <div>
+                <button class="précedent">question président</button>
+            </div>
+            <div>
+                <button class="next">question suivante</button>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="question3">
+        <h1>Que pensez-vous de votre corps?</h1>
+        <div class="question3__q">
+            <div class="question3__inputs">
+                <div class="reponse">
+                    <input type="radio" id="fatig" name="check">
+                    <label for="fatig"> fatigue </label>
+                </div>
+                <div class="reponse">
+                    <input type="radio" id="trop" name="check">
+                    <label for="trop"> trop fatgue </label>
+                </div>
+            </div>
+            <div class="question3__inputs">
+                <div class="reponse">
+                    <input type="radio" id="Bien" name="check">
+                    <label for="Bien"> Bien </label>
+                </div>
+                <div class="reponse">
+                    <input type="radio" id="moyen" name="check">
+                    <label for="moyen"> moyen </label>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!------------------------------------------------------------------------------------------
+    ________________________________***section recommandations***** ___________________________
+    ------------------------------------------------------------------------------------------->
+
+    <section class="recommandations">
+        <div class="recommandations__offic section">
+            <h1 data-fr>Recommandations officielles</h1>
+            <h1 data-ar>التوصيات الرسمية</h1>
+            <div class="section__display">
+                <div>
+                    <h3 data-fr>Si vous pensez être malade, </h3>
+                    <h3 data-ar>إذا كنت كتضن انك مريض فمن الاحسن </h3>
+                    <p data-fr>
+                        évitez les endroits publics.<br>
+                        Ne rendez pas visite aux personnes fragiles.<br>
+                        Évitez de sortir de chez vous.<br>
+                        Respectez les mesures barrière (lavage de main, masque).<br>
+                        Surveillez vos symptômes, l’évolution de votre température<br>
+                        corporelle et recherchez un avis médical.
+                    </p>
+                    <p data-ar>
+                        تبعد من البلايص العمومية<br>
+                        متزورجش ناس الضعفاء ) الناس الكبار او المرضى<br>
+                        بقا فدارك<br>
+                        التزم التعليمات لمفروضة : غسل يديك، ماسك<br>
+                        راقب أعراض ديالك والتغيرات في درجة حرارة في جسم ديالك واستشر مع طبيب<br>
+                    </p>
+                </div>
+                <div>
+                    <h2 data-fr>Appel Gratuit</h2>
+                    <h2 data-ar>اتصل مجانًا</h2>
+                    <button>080 100 47 47</button>
+                    <p><a href="https://www.sante.gov.ma/Pages/Accueil.aspx">www.sante.gov.ma</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="recommandations__contact">
+            <h2 data-fr> Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des symptômes ? </h2>
+            <h2 data-ar>واش كتضن انك تعرضت لفيروس كورونا المستجد و عندك الأعراض ديالها؟ </h2>
+            <img src="images/png/1f637.png" alt="icon">
+            <div>
+                <button data-fr>Demarer le test</button>
+                <button data-ar>نبداو الاختبار</button>
+            </div>
+        </div> -->
+    </section>
+
+
+    <!---------------------------------------------------------------------------------
+                    *****foooooooooooooooter****
+     -------------------------------------------------------------------------------------->
+    <footer class="hero-footer">
+        <img src="images/png/logo__sante-10.png" alt="">
+        <div class="hero-footer__infoo contenu">
+            <div class="contenu__nav">
+                <ul data-fr>
+                    <li><button class="button  button1"> عربي <i id="icon" class="fa fa-globe"></i></button></li>
+                    <li><a href="index.html">accueil</a></li>
+                    <li><a href="index1.html">conseil</a></li>
+                </ul>
+                <ul data-ar>
+                    <li><button class="button  button1"> FRAN <i class="fa fa-globe"></i></button></li>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index1.html">نصائح</a></li>
+                </ul>
+
+            </div>
+            <div class="contenu__utiles">
+                <ul data-fr>
+                    <li>
+                        <h2>Contacts utiles</h2>
+                    </li>
+                    <li>
+                        <p> économique "Alo épidémie vigilance"</p>
+                    </li>
+                    <li>
+                        <h3>080 100 47 47</h3>
+                    </li>
+                    <li>
+                        <p>Aide médicale urgente</p>
+                    </li>
+                    <li>
+                        <h3>114</h3>
+                    </li>
+                </ul>
+                <ul data-ar>
+                    <li>
+                        <h2> اتصالات مفيدة </h2>
+                    </li>
+                    <li>
+                        <p> الرقم الاقتصادي "ألو اليقضة الوبائية"</p>
+                    </li>
+                    <li>
+                        <h3> 080 100 47 47</h3>
+                    </li>
+                    <li>
+                        <p> للمساعدة الطبية الاستعجالية</p>
+                    </li>
+                    <li>
+                        <h3> 114</h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="contenu__parag">
+                <p>Algorithme d'orientation mis à jour sur les recommandations en vigueur <br>
+                    au 22/03/2020 à 16h15. Ce site d’information n’est pas un dispositif médical,<br>
+                    il ne délivre pas d’avis médical. Projet solidaire d'urgence,financé par l’Alliance<br>
+                    Digitale contre le COVID-19 : @maladiecovid19</p>
+            </div>
+        </div>
+        <div class="hero-footer__the-end">
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        $('.button1').click(function () {
+            var lang = $('html').attr('lang');
+            if (lang == 'fr') $('html').attr('lang', 'ar');
+            if (lang == 'ar') $('html').attr('lang', 'fr');
+
+        });
+    </script>
+    <script src="js/function.js"></script>
+
+</body>
+
+</html>

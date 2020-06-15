@@ -1,0 +1,127 @@
+.recommandations{
+    &__offic{
+        width: $widthSize;
+        height: 400px;
+        background-color: $bluColor;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 100px;
+    
+        h1{
+            padding: 25px;
+            color: $whiteColor;
+        }
+    }
+    .section{
+        &__display{
+            @extend %displ;
+            justify-content: space-between;
+            margin-top: 20px;
+            line-height: 40px;
+            h3{
+                text-align: left;
+                font-size: 20px;
+            }
+            p{
+                color: $whiteColor;
+                text-align: left; 
+                font-size: 20px; 
+            }
+            h2{
+                font-weight: bold;
+                color: $yellowColor;
+            }
+            button{
+                @extend %test ; 
+                margin: 20px 0px;
+                width: 150px;
+                height: 50px;
+                background-color:$yellowColor;
+                color: $bluColor;
+                font-size: 20px;
+            }
+            a{
+                color: $whiteColor;
+                border-bottom: 2px solid $yellowColor;
+            }
+        }
+    }
+    &__contact{
+        width: $widthSize;
+        height: 250px;
+        background-color: $blColor;
+        text-align:center;
+        h2{
+            color: $buttonColor;
+            padding: 20px;
+        }
+        button{
+            margin: 25px auto 0px;
+            width: 450px;
+            height: 45px;
+            font-size: 20px;
+            @extend %test ; 
+        }
+    }
+}
+
+@media ( max-width:767px ) {
+    .recommandations{
+        &__offic{
+            padding:0px;
+            h1{
+                font-size: 1rem;
+            }
+        }
+        .section{
+            &__display{
+                display: block;
+                line-height: 25px;
+                margin-top: 5px;
+                h3{
+                    font-size: 0.7rem;
+                    text-align: center;
+                }
+                p{
+                    font-size: 0.7rem;
+                    text-align: center;  
+                }
+            }
+        } 
+        &__contact{
+            height: 160px;
+            h2{
+                font-size: 0.7rem;
+            }
+            img{
+                width: 10%;
+            }
+            button{
+                width: 300px;
+                height: 30px; 
+                font-size: 1rem;
+                margin: 10px auto;
+            } 
+        }
+    }
+}
+@media ( max-width:992px ) {
+    .recommandations{
+        .section{
+            &__display{
+                p{
+                    font-size: 1rem;
+                }
+                
+            }
+        }
+        &__contact{
+            button{
+                margin: 20px auto 0px;
+                font-size: 1.25rem;
+                width: 250px;
+                height: 35px;
+            }
+        }
+    }
+}

@@ -1,0 +1,525 @@
+.symptômes{
+    width: $widthSize;
+    margin-top: 70px;
+    text-align: center;
+    h1{
+        color: $bluColor;
+        font-size: 30px
+    }
+    &__cas{
+        display: flex;
+        justify-content: center;
+    }
+    .icon{
+        .cas-virus{
+            width: 60%;
+        }
+        &__left{
+            margin:65px 110px;
+            line-height: 25px;
+            p{
+                font-weight: bold;
+                margin-bottom: 60px;
+                font-size: 20px;
+            }
+        }
+        &__right{
+            margin:28px 110px;
+            line-height: 25px;
+            p{
+                font-weight: bold;
+                margin-bottom: 30px;
+                font-size: 20px;
+            }
+        }
+    }
+    &__covod{
+        height: 300px;
+        @extend %displ;
+        line-height: 30px;
+        p{
+            font-weight: bold;
+            color: $bColor;
+        }
+    
+    }
+}
+
+//multi steps form
+
+.wrapper {
+    margin: 50px auto;
+    max-width: 600px;
+    .radio-btn-wrapper {
+        position: relative;
+      }
+     
+    .radio-btn-wrapper:after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        background-color: #026534;
+        position: absolute;
+        left: 0%;
+        top: 23px;
+        z-index: -1;
+    }
+    .radio-btn {
+        display: inline-block;
+        text-align: center;
+    }
+    .radio-btn:nth-child(2) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .radio-btn:first-child .radio-btn__indicator {
+        margin-left: 0;
+    }
+    .radio-btn:last-child {
+        position: absolute;
+        right: 0;
+    }
+    .radio-btn:last-child .radio-btn__indicator {
+        margin-right: 0;
+    }
+    .label {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .radio-btn label {
+        color: $blackColor;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .radio-btn input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    .radio-btn__indicator {
+        position: relative;
+        margin: 0 auto;
+          width: 50px;
+          height: 50px;
+          background: $whiteColor;
+    }
+    .radio-btn .radio-btn__indicator {
+        border-radius: 50%;
+    }
+    /* Checked */
+    .radio-btn input:checked ~ .radio-btn__indicator {
+        background: $buttonColor;
+        border-color: #FDCD28;
+    }
+    /* Radio button circle */
+   .radio-btn .radio-btn__indicator:after {
+      position: absolute;
+      content: '';
+      top: 16px;
+      left: 16px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: $yellowColor;
+   }
+}
+
+// Information__préambule
+
+.test{
+    display: block;
+    width: $widthSize;
+    height: 650px;
+    text-align: center;
+    line-height: 160px;
+    &__préambule{
+        margin: auto;
+        width: 80%;
+        height: 400px;
+        background-color: $newColor;
+        line-height: 35px;
+        border-radius: 5px;
+        h2{
+            padding: 20px;
+            color: $buttonColor;
+        }
+        p{
+            padding: 0px 50px;
+        }
+        div{
+            border-bottom: 2px solid $yellowColor;
+            width: 200px;
+            margin: 20px auto;
+        }
+    }
+    &__button{
+        width: 300px;
+        height: 45px;
+        font-size: 1.5rem;
+        @extend %test ; 
+    }
+}
+
+// Question style 1
+
+.questions{
+    display: none;
+    @include largeur;
+
+    // progress-bar
+    &__pro{
+        width: $widthSize;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .progress-bar{
+            width: 580px;
+            height: 15px;
+            border-radius: 15px;
+            background-color: #E6F1F7;
+            margin: 10px 5px;  
+        }
+        .progress{
+            width: 20px;
+            height: 15px;
+            border-radius: 15px;
+            background-color: $buttonColor;  
+        }
+    }
+    
+    &__createElement{
+        width: 80%;
+        height: 350px;
+        // border: 1px solid #000;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px $buttonColor;
+        margin: 40px auto;
+        h1{
+            padding: 20px;
+        }
+    }
+
+    h1{
+        color: $opacityColor;
+        text-align: center;
+        margin: 50px ;
+    }
+    &__inputs{
+        width: 80%;
+        height: 200px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        .reponse{
+            width: 200px;
+            height: 60px;
+            margin: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            label{
+                font-size: 25px;
+                cursor: pointer;
+                color: $opacityColor;
+            }
+            input{
+                display: none;
+            }
+            label::after{
+                content: "";
+                position: absolute;
+                right: 40%;
+                bottom: 25%;
+                width: 25px;
+                height: 25px;
+                border: 3px solid $buttonColor;
+                border-radius: 50%;
+                box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.5);
+            }
+            label::before{
+                content: "";
+                position: absolute;
+                right: 43%;
+                bottom: 19%;
+                transform: translateY(-50%);
+                width: 19px;
+                height: 19px;
+                background-color: $yellowColor;
+                border-radius: 50%;
+                box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.5);
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+            input:checked ~ label::before {
+                 opacity: 1;
+            }
+        }
+
+    }
+    &__one{
+        width: 80%;
+        height: 240px;
+        background-color: $yellowColor;
+        margin: auto;
+        line-height: 35px;
+        border-radius: 5px;
+        text-align: center;
+        h2{
+            padding: 20px;
+        }
+        p{
+            padding: 0px 150px;
+            font-weight: bold;
+        }
+    }
+    &__butttons{
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        margin: 50px auto 20px;
+        button{
+            width: 280px;
+            height: 45px;
+            margin-top: 40px;
+            font-size: 1.5rem;
+            @extend %test ;  
+        }
+    }
+}
+
+// Question style 2
+
+.question2{
+    @include largeur;
+    h1{
+       color: $opacityColor;
+       text-align: center; 
+       margin-bottom: 50px;
+    }
+    &__degré{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 40px;
+        input{
+            width: 200px;
+            height: 50px;
+            border-radius: 5px;
+            border: 2px solid $buttonColor;
+            outline: none;
+            font-size: 20px;
+            margin: 0px 5px;
+        }
+        label{
+            font-size: 20px; 
+            color: $buttonColor;
+        }
+    }
+    &__suivent{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        button{
+        width: 250px;
+        height: 45px;
+        font-size: 1.5rem;
+        @extend %test ;  
+        }  
+    }
+}
+
+// Question style 3
+
+.question3{
+    @include largeur;
+    text-align: center;
+    h1{
+        color: $opacityColor;
+        padding: 50px;
+        margin-bottom: 50px;
+    }
+    &__q{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    &__inputs{
+        width: 80%;
+        height: 200px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        .reponse{
+            @extend .repond;
+            margin: 20px 50px;
+            label{
+                @extend .labe;
+                text-align: center;
+            }
+            input{
+                display: none;
+            }
+            label::after{
+                @extend .label-after;
+            }
+            label::before{
+                @extend .label-before;
+            }
+            input:checked ~ label::before {
+                 opacity: 1;
+            }
+        }
+    }
+
+}
+
+// Question style 4
+
+.question4 {
+    @include largeur;
+    h1{
+        color: $opacityColor;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &__inputs{
+        width: 60%;
+        margin: auto;
+        height: 200px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        .reponse{
+            @extend .repond;
+            margin: 5px;
+            label{
+                @extend .labe;
+            }
+            input{
+                display: none;
+            }
+            label::after{
+                @extend .label-after;
+            }
+            label::before{
+               @extend .label-before;
+            }
+            input:checked ~ label::before {
+                 opacity: 1;
+            }
+        }
+
+    }  
+    
+}
+
+.resultat{
+    display: none;
+    line-height: 30px;
+    h1{
+        text-align: center;
+        color: $yellowColor;
+        font-size: 1.8rem;
+    }
+    &__explication{
+        width: 50%;
+        height: 300px;
+       border-radius: 5px;
+        margin: 40px auto;
+        background-color: $newColor;
+        h2{
+            text-align: center;
+            color: $whiteColor;
+            padding: 20px;
+        }
+        p{
+            text-align: center;
+            color: $bluColor;
+            padding: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: auto 10px;
+        }
+    }
+    &__reprendre{
+        margin: auto;
+        text-align: center;
+        button{
+            width: 280px;
+            height: 45px;
+            margin-top: 40px;
+            font-size: 1.5rem;
+            @extend %test ; 
+        }
+    }
+}
+
+
+@media ( max-width:767px ) {
+    .symptômes{
+        margin-top: 20px;
+        h1{
+            font-size: 1rem;
+        }
+        .icon{
+            .cas-virus{
+                width: 50%;  
+            }
+            &__left{
+                margin:35px 50px;
+                p{
+                    font-size: 0.6rem;
+                    margin-bottom: 30px;
+                }
+                .fièvre{
+                    width: 25%;
+                }
+            }
+            &__right{
+                margin:35px 50px;
+                p{
+                    font-size: 0.6rem;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        
+    } 
+}
+
+@media ( max-width:992px ) {
+    .symptômes{
+    .icon{
+        .cas-virus{
+            width: 50%;  
+        }
+        &__left{
+            margin:35px 50px;
+            p{
+                font-size: 0.6rem;
+                margin-bottom: 30px;
+            }
+            .fièvre{
+                width: 25%;
+            }
+        }
+        &__right{
+            margin:15px 50px;
+            p{
+                font-size: 0.6rem;
+                margin-bottom: 23px;
+            }
+        }
+    }
+}
+}
+.précedent{
+    display: none;
+}
